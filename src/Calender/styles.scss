@@ -1,0 +1,95 @@
+.calender-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30%;
+
+  border: 1px solid skyblue;
+
+  .calendar-header{
+    font-weight: 600;
+    background-color: skyblue;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .previous,
+    .next{
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+  }
+
+  .day-names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    widows: 90%;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    font-weight: 600;
+
+    span{
+      &:first-child{
+        padding-left: 3px;
+      }
+  
+      &:last-child{
+        padding-right: 6px;
+      }
+    }
+
+  }
+
+  .calendar-body{
+    .week-div{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 5px;
+      color: black;
+      font-weight: 500;
+
+      &:last-child{
+        margin-bottom: 10px;
+      }
+      .day-div{
+        text-align: center;
+        width: 10%;
+        cursor: pointer;
+        color: rgba($color: black, $alpha: 0.8);
+        
+        .before {
+          padding: 8px;
+          color: rgba(0,0,0,0.4);
+        }
+        .today{
+          padding: 8px;
+          background-color: rgba($color:grey,$alpha:0.5);
+          width: 75%;
+        }
+        .day-text{
+          padding: 8px;
+        }
+        .selected{
+          color: white;
+          background-color: rgba($color: maroon, $alpha: 0.8);
+          padding:8px;
+          width: 75%;
+        }
+      }
+
+      
+    }
+  }
+}
+
+@media only screen and (max-width:700px){
+  .calender-div{
+    width: 100%;
+  }
+
+}

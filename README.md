@@ -1,2 +1,2 @@
-# react-calendar-demo
+# react-calendar
 Created with CodeSandbox
